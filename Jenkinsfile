@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        msbuild 'MSBUILD'
+        msbuild 'VS_pr_build'
     }
 
     stages {
