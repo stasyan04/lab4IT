@@ -1,8 +1,8 @@
 pipeline {
     agent any
 
-    environment {
-        BUILD_DIR = 'build'
+    tools {
+        msbuild 'MSBUILD'
     }
 
     stages {
