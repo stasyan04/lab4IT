@@ -14,7 +14,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                bat 'msbuild test_repos.sln /t:Build /p:Configuration=Release'
+                bat '\"${MSBUILD}\" test_repos.sln /t:Build /p:Configuration=Release'
             }
         }
 
