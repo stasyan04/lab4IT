@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        msbuild 'VS_pr_build'
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -16,7 +12,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                bat '\"${MSBuildToolsPath}\\MSBuild.exe\" test_repos.sln /t:Build /p:Configuration=Release'
+                bat '"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" test_repos.sln /t:Build /p:Configuration=Release'
             }
         }
 
